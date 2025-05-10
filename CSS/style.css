@@ -1,0 +1,930 @@
+/* importar las fuentes de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --cream: #ffe8d1;
+    --aqua: #68c3d4;
+    --dark-aqua: #568ea3;
+    --text-blue: #29454f;
+    --white: #fdfeff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--text-blue);
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+div {
+    border-radius: 1em;
+}
+
+.tituloBlanco {
+    color: var(--white);
+    font-size: 2.1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Lora", serif;
+    margin-top: 2em;
+}
+
+.fondo-blanco {
+    background-color: var(--white);
+}
+
+.fondo-crema {
+    background-color: var(--cream);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Copyright*/
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    margin-bottom: 1em;
+}
+
+.copyright p {
+    color: white;
+    text-align: center;
+}
+
+/******************************************/
+/*cabecera común a todas las páginas*/
+header {
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    background-color: var(--dark-aqua);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white);
+}
+
+nav h1 {
+    font-size: 2.5em;
+    font-family: "Lora", serif;
+    color: var(--white);
+}
+
+/*Modificar el menú*/
+nav ul {
+    display: flex;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    color: var(--white);
+    font-size: 1.2em;
+    padding: 0.8em 1em;
+}
+
+nav ul li a p {
+    margin-left: 0.5em;
+    display: inline-block;
+}
+
+/*hover de las opciones del menú*/
+nav ul li:hover {
+    background-color: var(--aqua);
+    transition: all 0.3s;
+}
+
+/*submenú*/
+nav li ul {
+    display: none;
+    position: absolute;
+    /* min-width: 150px; */
+}
+
+nav li:hover>ul {
+    /*Mostar los submenús cuando se hace hover*/
+    display: block;
+    background-color: var(--dark-aqua);
+}
+
+/*Ocultar el checkbox de la esquina derecha*/
+nav #ckbox {
+    display: none;
+}
+
+/*icono de triple barra del menu*/
+.drawer {
+    color: var(--white);
+    float: left;
+    cursor: pointer;
+    display: none;
+    border: solid 0.1em var(--white);
+    padding: 0.2em;
+    border-radius: 0.1em;
+}
+
+
+/*********************************************/
+/*contenido propio de la home*/
+.home main {
+    padding: 2em 1em;
+    color: var(--white);
+    margin-top: 10vh;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 1300px;
+    gap: 8em;
+    width: 100%;
+}
+
+.home main .principal {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home main h1 {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.home main section .principal p {
+    text-align: center;
+    width: 80%;
+    margin: 1em auto;
+    width: 80%;
+}
+
+.home main .buttons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 1em auto;
+    width: 80%;
+}
+
+.home main form button {
+    margin: 1em 0.5em;
+    width: 8em;
+    height: 3em;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.home main img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.home section {
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+    position: relative;
+    left: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+/*aside de la home*/
+.home aside {
+    flex: 1;
+    position: static;
+    margin-top: 2em;
+    right: 0;
+    font-size: 0.8em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home aside h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.home aside p {
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+.home aside img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.home aside h3 {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/*botones home*/
+.home .primary-btn,
+.home .contact-btn {
+    display: inline-block;
+    background-color: var(--dark-aqua);
+    color: var(--white);
+    border: solid var(--aqua);
+    border-radius: 0.2em;
+}
+
+.home .primary-btn:hover,
+.home .contact-btn:hover {
+    background-color: var(--aqua);
+    transition: 0.3s;
+}
+
+
+/*************************************/
+/* Trabaja con nosotras */
+.job-main {
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.job-main form {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 2em;
+    justify-content: center;
+    font-size: 1em;
+    text-align: left;
+}
+
+.job-main label,
+.job-main input {
+    display: block;
+}
+
+.job-main label {
+    margin-top: 0.5em;
+}
+
+.job-main textarea {
+    width: 100%;
+}
+
+.inline-block {
+    display: inline;
+}
+
+.job-main fieldset {
+    padding: 0.7em;
+    margin: 1em;
+}
+
+.job-main fieldset div {
+    display: inline-flex;
+    gap: 0.1em;
+}
+
+.job-main input[type=radio] {
+    margin-left: 0.7em;
+}
+
+.job-main input[type=text],
+.job-main input[type=url] {
+    width: 100%;
+}
+
+
+input[type=submit],
+input[type=reset] {
+    display: inline-block;
+    margin: 0.5em 2em 2em 2em;
+    padding-inline: 3em;
+    background-color: var(--dark-aqua);
+    color: var(--white);
+    border: solid var(--aqua);
+    border-radius: 0.2em;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: var(--aqua);
+    transition: 0.3;
+}
+
+.job-main .buttons-form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+
+/*Publicaciones*/
+.publication-main h1 {
+    text-align: center;
+}
+
+.publication-box {
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+.publication-main .publication {
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+    gap: 1em;
+    justify-content: left;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.publication-main .publication h2 {
+    font-size: 1.2em;
+}
+
+.publication-main .publication img {
+    height: auto;
+    width: 150px;
+    border-radius: 0.5em;
+}
+
+.publication-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-text h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.publication-text p {
+    margin-top: 0.5em;
+}
+
+
+
+/*********************************************/
+/*Contacto y Localización*/
+.contactoUbi main {
+    display: flex;
+    flex-direction: column;
+    /* Distribución vertical */
+    flex-direction: column;
+    /* Alinea los elementos hijos al inicio del eje principal del contenedor */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*Contacto*/
+.contactoUbi main .contacto {
+    padding: 2%;
+    margin: auto;
+    width: 75vw;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.contactoUbi main .contacto form {
+    width: 75%;
+    height: fit-content;
+}
+
+.contactoUbi main .contacto form fieldset {
+    margin-bottom: 1rem;
+}
+
+.contactoUbi main .contacto form .grupoCampos label {
+    display: inline-block;
+    width: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+}
+
+.contactoUbi main .contacto form .grupoCampos input {
+    margin-left: 2.5em;
+}
+
+.contactoUbi main .contacto form #campoCorreo {
+    width: 12em;
+    margin-right: 0;
+}
+
+.contactoUbi main .contacto form #email {
+    margin-left: -1.5em;
+}
+
+
+.contactoUbi main .contacto form textarea {
+    display: block;
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    resize: none;
+}
+
+.contactoUbi main .contacto form .inputLargo {
+    width: 18em;
+}
+
+/*********************************************/
+/*Localización*/
+.contactoUbi main .localizacion {
+    padding: 2em;
+    margin: 2em auto;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactoUbi main .localizacion .ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Imagen */
+.contactoUbi main .localizacion .sello {
+    width: 15vh;
+    margin-bottom: 1.5em;
+}
+
+/* Texto */
+.contactoUbi main .localizacion .texto p {
+    margin: 0.5em 3em;
+}
+
+/*********************************************/
+/*Áreas de trabajo*/
+
+.areasTrabajo main {
+    display: flex;
+    /* Distribución vertical */
+    flex-direction: column;
+    /* Alinea los elementos hijos al inicio del eje principal del contenedor */
+    justify-content: flex-start;
+}
+
+.areasTrabajo main h3 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+.areasTrabajo main section .descriptionBoxImpar {
+    background-color: var(--white);
+    position: relative;
+    text-align: justify;
+    margin: 2%;
+    padding: 2%;
+}
+
+.areasTrabajo main section .descriptionBoxPar {
+    background-color: var(--cream);
+    position: relative;
+    text-align: justify;
+    margin: 2%;
+    padding: 2%;
+}
+
+.areasTrabajo main section .descriptionBoxImpar h4,
+.areasTrabajo main section .descriptionBoxPar h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: var(--text-blue);
+}
+
+.areasTrabajo main section .descriptionBoxImpar p,
+.areasTrabajo main section .descriptionBoxPar p {
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: var(--dark-aqua);
+    font-family: Lora;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/*********************************************/
+/*Quiénes somos*/
+
+.quienesSomos main a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-aqua);
+    background: var(--white);
+    padding: 10px 20px;
+    margin: left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.quienesSomos main a:hover {
+    color: var(--white);
+    background: var(--dark-aqua);
+    transition: 0.5s;
+}
+
+.quienesSomos main #andrea {
+    background-color: var(--white);
+    position: relative;
+    text-align: justify;
+    border-radius: 1em;
+    margin: 2%;
+    padding: 2%;
+}
+
+.quienesSomos main #maria {
+    background-color: var(--cream);
+    position: relative;
+    text-align: justify;
+    border-radius: 1em;
+    margin: 2%;
+    padding: 2%;
+}
+
+.quienesSomos main .imgBox {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1em auto;
+    z-index: 0;
+}
+
+.quienesSomos main .imgBox img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 1em;
+}
+
+
+
+/**************************************************************************/
+/*RESPONSIVE*/
+
+/*MOVILES VERTICAL*/
+@media screen and (max-width:576px) and (orientation:portrait) {
+    nav {
+        display: flex;
+    }
+
+    /*Modificar el menú*/
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        position: absolute;
+    }
+
+    nav ul li:last-child {
+        border-right: none;
+    }
+
+    nav ul li a {
+        color: var(--white);
+        font-size: 1.2em;
+        padding: 0.8em 1em;
+    }
+
+    nav ul li a p {
+        margin-left: 0.5em;
+        display: inline-block;
+    }
+
+    /*hover de las opciones del menú*/
+    nav ul li:hover {
+        background-color: var(--aqua);
+        transition: all 0.3s;
+    }
+
+    /*submenú*/
+    nav li ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 17em;
+        z-index: 999;
+        flex-direction: column;
+        padding: 0.5em;
+        width: max-content;
+    }
+
+    nav li:hover>ul {
+        /*Muestra los submenús cuando se hace hover*/
+        display: flex;
+        left: 15.2em;
+    }
+
+    nav li ul li a {
+        padding: 0.5em 1em;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+    }
+
+    .menu_item {
+        display: inline-block;
+    }
+
+    .ckbox {
+        display: none;
+    }
+
+    .home .home-content {
+        flex-direction: column;
+    }
+
+    .home section,
+    .home aside {
+        width: 100%;
+    }
+
+    section img {
+        width: 50%;
+        height: 25%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    /*quienes somos*/
+    #andrea a,
+    #maria a {
+        margin-bottom: 2em;
+    }
+
+    .quienesSomos img {
+        max-width: 150px;
+        width: 90%;
+        height: auto;
+    }
+
+    /*contacto*/
+    .contactoUbi main .contacto form #email {
+        margin-left: 2.5em;
+    }
+}
+
+
+
+/*MOVILES HORIZONTAL y TABLETS VERTICAL, NO SE ESPECIFICA ORIENTATION PARA QUE APLIQUE A LOS DOS*/
+@media screen and (max-width:768px) {
+    nav {
+        display: flex;
+        position: relative;
+    }
+
+    /*Modificar el menú*/
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        position: fixed;
+    }
+
+    nav ul li:last-child {
+        border-right: none;
+    }
+
+    nav ul li a {
+        color: var(--white);
+        font-size: 0.8em;
+        /* padding: 0.4em 0.5em; */
+    }
+
+    nav ul li a p {
+        margin-left: 0.5em;
+        display: inline-block;
+    }
+
+    /*hover de las opciones del menú*/
+    nav ul li:hover {
+        background-color: var(--aqua);
+        transition: all 0.3s;
+    }
+
+    /*submenú*/
+    nav li ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 17em;
+        z-index: 999;
+        flex-direction: column;
+        padding: 0.5em;
+        width: max-content;
+    }
+
+    nav li:hover>ul {
+        /*Muestra los submenús cuando se hace hover*/
+        display: flex;
+        left: 15.2em;
+    }
+
+    nav li ul li a {
+        padding: 0.5em 1em;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .menu_item {
+        display: inline-block;
+    }
+
+    .ckbox {
+        display: none;
+    }
+
+    .home .home-content {
+        flex-direction: column;
+    }
+
+    .home section,
+    .home aside {
+        width: 100%;
+    }
+
+    section img {
+        width: 50%;
+        height: 25%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    /*quienes somos*/
+    #andrea a,
+    #maria a {
+        margin-bottom: 2em;
+    }
+
+    .quienesSomos img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+    }
+
+    /*contacto*/
+    .contactoUbi main .contacto form #email {
+        margin-left: 2.5em;
+    }
+}
+
+
+/*Tablets en horizontal, también establece el ancho fijo para pantallas de mas de 1300px.
+A partir de esa medida máxima, deja las medida por defecto*/
+@media screen and (max-width:1300px){
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    /*Modificar el menú*/
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        position: relative;
+    }
+
+    nav ul li:last-child {
+        border-right: none;
+    }
+
+    nav ul li a {
+        color: var(--white);
+        font-size: 1.2em;
+        padding: 0.8em 1em;
+    }
+
+    nav ul li a p {
+        margin-left: 0.5em;
+        display: inline-block;
+    }
+
+    /*hover de las opciones del menú*/
+    nav ul li:hover {
+        background-color: var(--aqua);
+        transition: all 0.3s;
+    }
+
+    /*submenú*/
+    nav li ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 17em;
+        z-index: 999;
+        flex-direction: column;
+        padding: 0.5em;
+        width: max-content;
+    }
+
+    nav li:hover>ul {
+        /*Muestra los submenús cuando se hace hover*/
+        display: flex;
+    }
+
+    nav li ul li a {
+        padding: 0.5em 1em;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+    }
+
+    .drawer {
+        display: block;
+        margin-left: 1em;
+    }
+
+    nav h1 {
+        margin-left: 1rem;
+
+    }
+
+    nav ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--text-blue);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all 0.5s;
+        flex-direction: column;
+        align-content: stretch;
+        z-index: 999;
+    }
+
+    nav ul li {
+        padding: 1rem 0px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        border-bottom: solid 0.1rem rgba(201, 196, 196, 0.4);
+        background-color: var(--text-blue);
+    }
+
+    #ckbox:checked~.menu-box {
+        left: 0px;
+    }
+}
