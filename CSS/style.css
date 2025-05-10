@@ -407,7 +407,6 @@ input[type=reset]:hover {
 /*Contacto y Localización*/
 .contactoUbi main {
     display: flex;
-    flex-direction: column;
     /* Distribución vertical */
     flex-direction: column;
     /* Alinea los elementos hijos al inicio del eje principal del contenedor */
