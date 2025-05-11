@@ -324,8 +324,13 @@ nav #ckbox {
 }
 
 .job-main input[type=text],
-.job-main input[type=url] {
+.job-main input[type=url],
+.job-main input[type=email] {
     width: 100%;
+}
+
+.job-main #telf {
+    width: 50%;
 }
 
 
@@ -830,7 +835,7 @@ input[type=reset]:hover {
 
 /*Tablets en horizontal, también establece el ancho fijo para pantallas de mas de 1300px.
 A partir de esa medida máxima, deja las medida por defecto*/
-@media screen and (max-width:1300px){
+@media screen and (max-width:1300px) {
 
     nav {
         justify-content: flex-start;
